@@ -1,0 +1,52 @@
+# .NET
+bin/
+obj/
+dist/
+publish/
+out/
+
+# Build results
+*.dll
+*.exe
+*.pdb
+*.cache
+*.suo
+*.user
+
+# NuGet
+*.nupkg
+*.snupkg
+
+# Entity Framework
+*.db
+*.db-shm
+*.db-wal
+
+# IDE
+.vs/
+.idea/
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Platform
+.idx/
+
+# User secrets
+secrets.json
+
+# Logs
+logs/
+*.log
+
+# Test results
+TestResults/
+coverage/

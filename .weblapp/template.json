@@ -1,0 +1,34 @@
+{
+  "name": "dotnet",
+  "displayName": ".NET",
+  "description": ".NET 9 Web API with Clean Architecture, Entity Framework Core, MediatR CQRS, and JWT authentication",
+  "category": "backend",
+  "language": "csharp",
+  "framework": "aspnet",
+  "stack": ["dotnet9", "aspnet", "ef-core", "mediatr", "jwt", "swagger"],
+  "features": ["clean-architecture", "cqrs", "jwt-auth", "swagger", "ef-migrations", "unit-testing"],
+  "commands": {
+    "dev": "dotnet run",
+    "build": "dotnet build",
+    "test": "dotnet test",
+    "migrate": "dotnet ef database update"
+  },
+  "packageManager": "nuget",
+  "ci": {
+    "workflowTemplate": "dotnet",
+    "runner": "ubuntu-latest",
+    "runtime": {
+      "name": "dotnet",
+      "version": "9.0",
+      "setup": "actions/setup-dotnet@v4",
+      "cache": "nuget"
+    },
+    "services": {},
+    "steps": {
+      "install": "dotnet restore",
+      "build": "dotnet build --no-restore",
+      "test": "dotnet test --no-build",
+      "lint": null
+    }
+  }
+}
